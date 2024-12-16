@@ -1,0 +1,28 @@
+:root {
+    --primary-color: #ff3d00;
+    --primary-light: #ff9e80;
+    --text-color: #ffffff;
+    --bg-color: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', system-ui, sans-serif;
+    background: var(--bg-color);
+    scroll-behavior: smooth;
+    color: var(--text-color);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+main {
+    background-color: var(--bg-color);
+}

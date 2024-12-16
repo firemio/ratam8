@@ -1,0 +1,56 @@
+---
+const members = [
+    { name: '碇三四郎', role: 'Vocal', image: '/images/ikari.webp' },
+    { name: 'YU-KI', role: 'Guitar', image: '/images/numa-k.webp' },
+];
+---
+<section class="members" id="members">
+    <h2>Members</h2>
+    <div class="members-grid">
+        {members.map(member => (
+            <div class="member">
+                <img src={member.image} alt={member.role} />
+                <h3>{member.name}</h3>
+                <p>{member.role}</p>
+            </div>
+        ))}
+    </div>
+</section>
+
+<style>
+    .members {
+        padding: 5rem 2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        color: var(--primary-color);
+    }
+
+    .members-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .member {
+        text-align: center;
+    }
+
+    .member img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+
+    .member h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+</style>
